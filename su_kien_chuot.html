@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thực hành sự kiện chuột</title>
+    <style>
+        img{
+            width: 300px;
+        }
+    </style>
+
+</head>
+<body>
+<img id="MyImage" src="https://thuthuatnhanh.com/wp-content/uploads/2020/02/hinh-mat-cuoi-de-thuong.jpg"/><br/>
+<p>Click buttom below to mover the picture to right</p>
+<button type="button" onclick="MoveRight()">Click me</button>
+
+<script>
+    let imgObj = null;
+    imgObj= document.getElementById("MyImage");
+    function init() {
+     imgObj.style.position = 'relative';
+     imgObj.style.bottom = '0px';
+    }
+    function MoveRight() {
+     imgObj.style.bottom = parseInt(imgObj.style.bottom) + 50 + 'px';
+    }
+    window.onload = init;
+</script>
+</body>
+</html>
